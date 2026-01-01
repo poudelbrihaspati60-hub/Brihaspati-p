@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Brihaspati Poudel Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.hero h1::before,
+.hero h1::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.hero h1::before {
+  color: #00fff0;
+  animation: glitch1 2s infinite;
+}
+
+.hero h1::after {
+  color: #ff00ff;
+  animation: glitch2 2s infinite;
+}
+
+@keyframes glitch1 {
+  0% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  100% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch2 {
+  0% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  100% { transform: translate(-2px, 2px); }
+}
+
+.hero p {
+  margin-top: 20px;
+  color: #00fff0;
+  letter-spacing: 2px;
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  text-align: center;
+  background: linear-gradient(90deg, #00fff0, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== GLASS CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.1);
+  box-shadow: 0 0 40px #00fff0;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  color: #00fff0;
+}
+
+/* ===== SKILLS ORB ===== */
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff00ff, #00fff0);
+  animation: spin 6s linear infinite;
+  box-shadow: 0 0 25px #00fff0;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(90deg, #00fff0, #ff00ff);
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 30px #ff00ff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<div class="hero">
+  <div>
+    <h1 data-text="BRIHASPATI POUDEL">BRIHASPATI POUDEL</h1>
+    <p>STUDENT OF CLASS 9 JASMINE</p>
+  </div>
+</div>
+
+<!-- ABOUT ME SECTION -->
+<section>
+  <h2 class="section-title">ABOUT ME</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Identity</h3>
+      <p>Student from Class 9 Jasmine learning web development.</p>
+    </div>
+    <div class="card">
+      <h3>My Mission</h3>
+      <p>I want to take my country to the next level and develop it using technology.  </p>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section>
+  <h2 class="section-title">SKILLS</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">Game</div>
+    <div class="skill">learning</div>
+  </div>
+</section>
+
+<!-- Favorite -->
+<section>
+  <h2 class="section-title">Favourite things</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>VIDEO GAME</h3>
+      <p>Freefire,Fifa2024,Roblox,.</p>
+    </div>
+    <div class="card">
+      <h3>Sports</h3>
+      <p> soccer, volleyball and gym workout</p>
+    </div>
+    <div class="card">
+      <h3>Food</h3>
+      <p>Momo,Chowmine and samosa.</p>
+    </div>
+<div class="card">
+      <h3>Cars and bike</h3>
+      <p> learning about them or dreaming to own one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+  <h2 class="section-title">CONTACT</h2>
+  <a href="https://www.facebook.com/poudelbrihaspati" target="_blank">My Facebook</a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Brihaspati Poudel. All rights reserved.
+</footer>
+
+</body>
+</html>
+
